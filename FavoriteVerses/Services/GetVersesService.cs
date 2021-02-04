@@ -5,17 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.Net.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace FavoriteVerses.Services
 {
     public class GetVersesService
     {
+        private readonly IConfiguration _config;
         public HttpClient Client { get; }
 
-        public GetVersesService(HttpClient client)
+        public GetVersesService(HttpClient client, IConfiguration config)
         {
-            client.BaseAddress = new Uri("https://emfservicesstage-api.azure-api.net/v1/");
-            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "d10161af8cf44f0c8267d571c682fda4");
+            _config = config;
+
+            client.BaseAddress = new Uri(_config["GetVersesApi:BaseAddress"]);
+            client.DefaultRequestHeaders.Add(_config["GetVersesApi:HeaderKey"], _config["GetVersesApi:HeaderValue"]);
 
             Client = client;
         }

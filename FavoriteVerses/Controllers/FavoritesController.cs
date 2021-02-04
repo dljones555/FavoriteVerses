@@ -26,7 +26,7 @@ namespace FavoriteVerses.Controllers
         }
 
         [HttpPost]
-        public async Task<bool> Add(SearchInfo search)
+        public async Task<bool> Add(SearchViewModel search)
         {
             if (!ModelState.IsValid)
                 return false;

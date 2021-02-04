@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FavoriteVerses.Models
 {
-    public class SearchInfo
+    public class SearchViewModel
     { 
         [Required]
         [Display(Name = "Start Date")]

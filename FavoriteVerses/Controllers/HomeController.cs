@@ -26,11 +26,11 @@ namespace FavoriteVerses.Controllers
 
         public IActionResult Index()
         {
-            return View(new SearchInfo() { TotalVerses = 5 } );
+            return View(new SearchViewModel() { TotalVerses = 5 } );
         }
 
         [HttpPost]
-        public async Task<IActionResult> Search(SearchInfo search)
+        public async Task<IActionResult> Search(SearchViewModel search)
         {
             VerseSearch result = null;
             if (ModelState.IsValid)

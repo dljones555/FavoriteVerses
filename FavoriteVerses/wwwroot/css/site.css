@@ -68,6 +68,26 @@ th, td {
     vertical-align: top;
 }
 
+.verse-image {
+    width: 300px;
+}
+
+.search-th-1 {
+    width: 40%;
+}
+
+.search-th-2 {
+    width: 30%;
+}
+
+.search-th-3 {
+    width: 30%;
+}
+
+.favorites-th {
+    width: 50%;
+}
+
 tr:nth-child(even) {
     background: #CCC
 }

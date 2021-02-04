@@ -11,9 +11,9 @@
         <table>
             <thead>
                 <tr>
-                    <th style="width: 40%">Verse Text</th>
-                    <th style="width: 30%">Verse Image</th>
-                    <th style="width: 30%">&nbsp;</th>
+                    <th class="search-th-1">Verse Text</th>
+                    <th class="search-th-2">Verse Image</th>
+                    <th class="search-th-3">&nbsp;</th>
                 </tr>
             </thead>
 
@@ -22,7 +22,7 @@
             {
                 <tr>
                     <td>@item.VerseText (@item.ReferenceText NLT)</td>
-                    <td><img src="@item.ImageLink" style="width: 300px" asp-append-version="true"></td>
+                    <td><img src="@item.ImageLink" class="verse-image" asp-append-version="true"></td>
                     <td><button id="@item.Id" class="btn-primary" onclick="addFavorite($(this).attr('id'));">favorite</button></td>
                 </tr>
             }
