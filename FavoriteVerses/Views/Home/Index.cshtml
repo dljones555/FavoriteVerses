@@ -1,0 +1,25 @@
+﻿@model FavoriteVerses.Models.SearchInfo
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Bible Verse Search</h2>
+
+<br />
+
+<form asp-controller="Home" asp-action="Search" method="post">
+    <div id="verses-search-box">
+        <label asp-for="StartDate"></label>
+        <input asp-for="StartDate" required /><br /><br />
+
+        <label asp-for="TotalVerses"></label>
+        <input asp-for="TotalVerses" required /><br /><br />
+   
+        <div class="search-button-box">
+            <input type="submit" class="btn-primary" value="search" />
+        </div>
+        <br />
+    </div>
+</form>
+        
+
